@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameComponent } from './game/game.component';
+import { EndComponent } from './end/end.component';
 
 
 
 @NgModule({
   declarations: [
-    GameComponent
+    EndComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class GameModule { }
+export class EndModule { }

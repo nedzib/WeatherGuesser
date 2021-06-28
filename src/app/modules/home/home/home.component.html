@@ -1,1 +1,22 @@
-<p>home wsadasdorks!</p>
+<body>
+    <div class="logoHome"></div>
+    <div class="generalContainer">
+        <input class="inputName" type="text" placeholder="name" (change)="onChangeName($event)">
+    </div>
+    <div class="generalContainer">
+        <div class="radioOption">
+            <input class="radio" type="radio" checked (click)="onChange(true)">
+            <label for="c">°C</label><br>
+        </div>
+        <div class="radioOption">
+            <input class="radio" type="radio" (click)="onChange(false)">
+            <label for="f">F</label>
+        </div>
+    </div>
+    <div class="generalContainer" (click)="onSubmit('start')">
+        <button class="startButton">Start</button>
+    </div>
+    <div class="generalContainer" (click)="onSubmit('about')">
+        <button class="about">?</button>
+    </div>
+</body>

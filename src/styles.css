@@ -2,11 +2,15 @@
 
 body {
     width: 97%;
-    height: auto;
+    height: 100%;
     background-color: #A0C8FF;
     font-family: sans-serif;
     font-weight: bold;
     user-select: none;
+}
+
+html {
+    height: 100%;
 }
 
 .logoHome {

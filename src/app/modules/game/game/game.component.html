@@ -1,1 +1,37 @@
-<p>game works!</p>
+<body>
+    <div class="gameContainer">
+        <div class="left">
+            <div class="leftContainer">
+                <div class="internalLeft">
+                    <div class="cityContainer">
+                        <h1 class="city">Bogotá</h1>
+                        <h2 class="country">Colombia</h2>
+                    </div>
+                    <div class="ubi"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="rightContainer">
+                <div class="buttonContainer">
+                    <div class="gameButton" (click)="onSelect(1)">
+                        <div class="answer">
+                            10°C
+                        </div>
+                    </div>
+                    <div class="gameButton" (click)="onSelect(2)">
+                        <div class="answer">
+                            15°C
+                        </div>
+                    </div>
+                    <div class="gameButton" (click)="onSelect(3)">
+                        <div class="answer">
+                            21°C
+                        </div>
+                    </div>
+                </div>
+                <h1 class="score">Score: {{this.score}}</h1>
+            </div>
+        </div>
+    </div>
+</body>

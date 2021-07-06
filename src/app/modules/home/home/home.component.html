@@ -4,14 +4,14 @@
         <input class="inputName" type="text" placeholder="name" (change)="onChangeName($event)">
     </div>
     <div class="generalContainer">
-        <div class="radioOption">
-            <input class="radio" type="radio" checked (click)="onChange(true)">
+        <label class="radioOption">
+            <input class="radio" id="c" name="c" type="radio" (click)="onChange(true)" [checked]="this.payload.temp">
             <label for="c">°C</label><br>
-        </div>
-        <div class="radioOption">
-            <input class="radio" type="radio" (click)="onChange(false)">
+        </label>
+        <label class="radioOption">
+            <input class="radio" id="f" name="f" type="radio" (click)="onChange(false)" [checked]="!this.payload.temp">
             <label for="f">F</label>
-        </div>
+        </label>
     </div>
     <div class="generalContainer" (click)="onSubmit('start')">
         <button class="startButton">Start</button>

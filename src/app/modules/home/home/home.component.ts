@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/services/usuario.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +16,10 @@ export class HomeComponent implements OnInit {
     name: 'Player'
   };
 
-  constructor() { }
+  constructor(
+    private UService: UsuarioService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     console.log('--Home--');
@@ -23,7 +28,9 @@ export class HomeComponent implements OnInit {
   public onSubmit(action: string): void{
     if (action === 'start'){
       console.log('--onSubmit--Start');
-      console.log(this.payload);
+      // console.log(this.payload);
+      this.UService.setSessionData(this.payload);
+      this.router.navigate(['/game']);
     } else if (action === 'about'){
       console.log('--onSubmit--About');
     }

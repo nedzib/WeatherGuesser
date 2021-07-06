@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { GameComponent } from './game/game.component';
-
+import { GameRoutingModule } from './game-routing.module';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { GameComponent } from './game/game.component';
     GameComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    GameRoutingModule
   ]
 })
 export class GameModule { }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EndComponent } from './end/end.component';
-
+import { EndRoutingModule } from './end-routing.module';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { EndComponent } from './end/end.component';
     EndComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EndRoutingModule
   ]
 })
 export class EndModule { }

@@ -165,7 +165,7 @@ html {
     }
     .city {
         margin: 0;
-        font-size: 15vw;
+        font-size: 12vw;
         margin-right: 30px;
         user-select: none;
     }
@@ -181,12 +181,15 @@ html {
     }
     .gameContainer .right .gameButton:hover {
         background-color: #ffcd69;
+        transition-duration: 0.3s;
     }
     .gameContainer .right .gameButton-wrong {
         background-color: tomato;
+        transition-duration: 0.6s;
     }
     .gameContainer .right .gameButton-right {
         background-color: teal;
+        transition-duration: 0.6s;
     }
     .ubi {
         width: 100px;
@@ -270,7 +273,7 @@ html {
     }
     .city {
         margin: 0;
-        font-size: 15vw;
+        font-size: 12vw;
         margin-right: 30px;
         user-select: none;
     }

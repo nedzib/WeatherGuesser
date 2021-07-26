@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
   public name: string = '';
   public payload = {
     temp: true,
-    name: 'Player'
+    name: 'Player',
+    score: 0
   };
 
   constructor(

@@ -4,33 +4,40 @@
             <div class="leftContainer">
                 <div class="internalLeft">
                     <div class="cityContainer">
-                        <h1 class="city">Bogotá</h1>
-                        <h2 class="country">Colombia</h2>
+                        <h1 class="city">{{capital}}</h1>
+                        <h2 class="country">{{country}}</h2>
                     </div>
-                    <div class="ubi"></div>
+                    <a href="www.google.com/maps/place/Bogotá/" target=”_blank”>
+                        <div class="ubi"></div>
+                    </a>
                 </div>
             </div>
         </div>
         <div class="right">
             <div class="rightContainer">
                 <div class="buttonContainer">
-                    <div class="gameButton" (click)="onSelect(1)">
+                    <div class="gameButton" (click)="onSelect(0)" [ngClass]="{'gameButton-wrong': wrong[0]}" [ngClass]="{'gameButton-right': right[0]}">
                         <div class="answer">
-                            10°C
+                            {{opt[0]}}
                         </div>
                     </div>
-                    <div class="gameButton" (click)="onSelect(2)">
+                    <div class="gameButton" (click)="onSelect(1)"  [ngClass]="{'gameButton-wrong': wrong[1]}" [ngClass]="{'gameButton-right': right[1]}">
                         <div class="answer">
-                            15°C
+                            {{opt[1]}}
                         </div>
                     </div>
-                    <div class="gameButton" (click)="onSelect(3)">
+                    <div class="gameButton" (click)="onSelect(2)"  [ngClass]="{'gameButton-wrong': wrong[2]}" [ngClass]="{'gameButton-right': right[2]}">
                         <div class="answer">
-                            21°C
+                            {{opt[2]}}
                         </div>
                     </div>
                 </div>
                 <h1 class="score">Score: {{this.score}}</h1>
+                <div class="gameButton" style="height: 60px" (click)="onSubmit()">
+                    <div class="answer">
+                        End
+                    </div>
+                </div>
             </div>
         </div>
     </div>

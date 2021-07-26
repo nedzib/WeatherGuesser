@@ -7,7 +7,8 @@ export class UsuarioService {
 
   public sessionData = {
     temp: true,
-    name: 'Player'
+    name: 'Player',
+    score: 0
   };
 
   constructor() { }
@@ -18,5 +19,9 @@ export class UsuarioService {
 
   public getSessionData(): any{
     return this.sessionData;
+  }
+
+  public resetScore(): any{
+    this.sessionData.score = 0;
   }
 }

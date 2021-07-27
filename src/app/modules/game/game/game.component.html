@@ -18,17 +18,17 @@
                 <div class="buttonContainer">
                     <div class="gameButton" (click)="onSelect(0)" [ngClass]="{'gameButton-wrong': wrong[0]}" [ngClass]="{'gameButton-right': right[0]}">
                         <div class="answer">
-                            {{opt[0]}}
+                            {{opt[0] | metric: this.payload.temp}}
                         </div>
                     </div>
                     <div class="gameButton" (click)="onSelect(1)"  [ngClass]="{'gameButton-wrong': wrong[1]}" [ngClass]="{'gameButton-right': right[1]}">
                         <div class="answer">
-                            {{opt[1]}}
+                            {{opt[1] | metric: this.payload.temp}}
                         </div>
                     </div>
                     <div class="gameButton" (click)="onSelect(2)"  [ngClass]="{'gameButton-wrong': wrong[2]}" [ngClass]="{'gameButton-right': right[2]}">
                         <div class="answer">
-                            {{opt[2]}}
+                            {{opt[2] | metric: this.payload.temp}}
                         </div>
                     </div>
                 </div>

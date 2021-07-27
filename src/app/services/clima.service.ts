@@ -16,7 +16,8 @@ export class ClimaService {
   public async weatherC(capitol: string): Promise<any> {
     await fetch(
       'https://api.openweathermap.org/data/2.5/weather?q=' +
-        capitol + environment.apiOpenWeather
+        capitol +
+        '&appid=' + environment.apiOpenWeather
     )
       .then((response) => response.json())
       .then((data) => {
@@ -42,7 +43,8 @@ export class ClimaService {
   public async weatherF(capitol: string): Promise<any> {
     await fetch(
       'https://api.openweathermap.org/data/2.5/weather?q=' +
-        capitol + environment.apiOpenWeather
+        capitol +
+        '&appid=' + environment.apiOpenWeather
     )
       .then((response) => response.json())
       .then((data) => {

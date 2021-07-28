@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { CapitalService } from 'src/app/services/capital.service';
 import { ClimaService } from 'src/app/services/clima.service';
 import { Router } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
+
 @Component({
   selector: 'app-game',
   templateUrl: './game.component.html',
@@ -12,6 +14,7 @@ export class GameComponent implements OnInit {
   public score = 0;
   public country = '';
   public capital = '';
+  public capitalId = '';
 
   public payload = {
     temp: true,
@@ -28,6 +31,8 @@ export class GameComponent implements OnInit {
   public wrong = [false, false, false];
 
   constructor(
+    @Inject(DOCUMENT)
+    private document: Document,
     private UService: UsuarioService,
     private CService: CapitalService,
     private WService: ClimaService,
@@ -43,6 +48,7 @@ export class GameComponent implements OnInit {
     };
     while (infoCountry.capital === '' || infoCountry.country === '') {
       infoCountry = await this.CService.randomCapital();
+      this.capitalId = infoCountry.capitalID;
     }
     console.log(infoCountry);
     // console.log(infoWeatherC, 'C°');
@@ -108,6 +114,7 @@ export class GameComponent implements OnInit {
     };
     while (infoCountry.capital === '' || infoCountry.country === '') {
       infoCountry = await this.CService.randomCapital();
+      this.capitalId = infoCountry.capitalID;
     }
     console.log(infoCountry);
     this.country = infoCountry.country;
@@ -131,5 +138,9 @@ export class GameComponent implements OnInit {
     console.log('--onSubmit--End');
     this.UService.setSessionData(this.payload);
     this.router.navigate(['/end']);
+  }
+
+  public onMap(): void{
+    window.open('https://www.google.com/maps/place/' + this.capitalId, '_blank');
   }
 }

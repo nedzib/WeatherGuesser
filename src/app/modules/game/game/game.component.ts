@@ -4,6 +4,7 @@ import { CapitalService } from 'src/app/services/capital.service';
 import { ClimaService } from 'src/app/services/clima.service';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-game',
@@ -141,6 +142,6 @@ export class GameComponent implements OnInit {
   }
 
   public onMap(): void{
-    window.open('https://www.google.com/maps/place/' + this.capitalId, '_blank');
+    window.open(environment.urlMaps + this.capitalId, '_blank');
   }
 }

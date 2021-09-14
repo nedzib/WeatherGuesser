@@ -75,6 +75,7 @@ export class GameComponent implements OnInit {
       this.score = this.score + 1;
       this.payload.score = this.score;
       audio.src = 'assets/sounds/right.mp3';
+      audio.muted = true;
       audio.play();
       this.reload();
     } else {
@@ -83,6 +84,7 @@ export class GameComponent implements OnInit {
       this.score = this.score - 1;
       this.payload.score = this.score;
       audio.src = 'assets/sounds/noright.mp3';
+      audio.muted = true;
       audio.play();
     }
   }

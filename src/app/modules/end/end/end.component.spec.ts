@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { EndComponent } from './end.component';
 
@@ -8,7 +9,10 @@ describe('EndComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EndComponent ]
+      declarations: [ EndComponent ],
+      imports: [
+        RouterTestingModule
+      ]
     })
     .compileComponents();
   });
@@ -22,4 +26,20 @@ describe('EndComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('On Submit for home', () => {
+    component.onSubmit('home');
+    expect(component).toBeTruthy();
+  });
+
+  it('On Submit for again', () => {
+    component.onSubmit('again');
+    expect(component).toBeTruthy();
+  });
+
+  it('On Submit for no action', () => {
+    component.onSubmit('mock');
+    expect(component).toBeTruthy();
+  });
+
 });

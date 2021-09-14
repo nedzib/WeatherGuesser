@@ -1,0 +1,375 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    width: 97%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: bold;
+    user-select: none;
+}
+
+html {
+    height: 103%;
+    background-image: url('../images/stacked-waves-haikei.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+.endButton{
+    height: 10%;
+    margin-bottom: 2%;
+}
+
+.logoHome {
+    width: 45vh;
+    height: 45vh;
+    /* background-image: url('../images/041-placeholder.svg'); */
+    background-image: url('../images/041-placeholder.svg');
+    background-size: contain;
+    margin: auto;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logoLose {
+    width: 50%;
+    height: 50%;
+    /* background-image: url('../images/001-sun.svg'); */
+    background-image: url('../images/001-sun.svg');
+    background-size: contain;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loseButtonContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.generalContainer {
+    width: 85%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.generalContainer .inputName {
+    width: 250px;
+    justify-content: center;
+    justify-self: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    border-style: dotted;
+    line-height: 2;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-size: larger;
+    background-color: white;
+}
+
+.generalContainer .startButton {
+    width: 200px;
+    margin: auto;
+    line-height: 3;
+    border-radius: 10px;
+    font-size: larger;
+    border-style: dotted;
+    background-color: white;
+}
+
+.generalContainer .startButton:hover {
+    background-color: #ffcd69;
+}
+
+.generalContainer .loseButton {
+    width: 200px;
+    margin: auto;
+    margin-top: 5%;
+    line-height: 3;
+    border-radius: 10px;
+    font-size: larger;
+    border-style: dotted;
+    background-color: white;
+}
+
+.generalContainer .loseButton:hover {
+    background-color: #ffcd69;
+}
+
+.generalContainer .about {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 50px;
+    font-size: larger;
+    border-style: dotted;
+    align-items: center;
+    background-color: white;
+}
+
+.generalContainer .about:hover {
+    background-color: #ffcd69;
+}
+
+.generalContainer .radioOption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 2;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.generalContainer .radioOption .radio {
+    height: 25px;
+    width: 25px;
+}
+
+.generalContainer .radioOption label {
+    font-size: larger;
+}
+
+
+/* Game view */
+
+@media (min-width: 800px) {
+    .scoreLabel {
+        margin: 0;
+        font-size: 4vw;
+    }
+    .gameContainer .right .gameButton {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 0px 500px 500px 0px;
+        height: 40%;
+        border-right-style: dotted;
+        border-right-width: 5px;
+        border-top-style: dotted;
+        border-top-width: 5px;
+        border-bottom-style: dotted;
+        border-bottom-width: 5px;
+    }
+    .answer {
+        margin: auto;
+        font-size: 4vw;
+        user-select: none;
+    }
+    .city {
+        margin: 0;
+        font-size: 12vw;
+        margin-right: 30px;
+        user-select: none;
+    }
+    .country {
+        margin: 0;
+        margin-left: 10px;
+        font-size: 6vw;
+        user-select: none;
+    }
+    .score {
+        margin-bottom: 2%;
+        font-size: 4vw;
+        margin-top: auto;
+    }
+    .gameContainer .right .gameButton:hover {
+        background-color: #ffcd69;
+        transition-duration: 0.3s;
+    }
+    .gameContainer .right .gameButton-wrong {
+        background-color: tomato;
+        transition-duration: 0.6s;
+    }
+    .gameContainer .right .gameButton-right {
+        background-color: teal;
+        transition-duration: 0.6s;
+    }
+    .ubi {
+        width: 100px;
+        height: 100px;
+        /* background-image: url('../images/029-compass.svg'); */
+        background-image: url('../images/029-compass.svg');
+        background-size: contain;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 5%;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .gameContainer {
+        width: 85%;
+        height: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .gameContainer .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* background-color: tomato; */
+        border-right-style: dotted;
+        border-right-width: 5px;
+    }
+    .gameContainer .leftContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .gameContainer .left .cityContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gameContainer .right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        /* background-color: greenyellow; */
+    }
+    .gameContainer .right .rightContainer {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 800px) {
+    .scoreLabel {
+        margin: 0;
+        font-size: 8vw;
+    }
+    .gameContainer .right .gameButton {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        margin-bottom: 10px;
+        border-radius: 0px 500px 500px 0px;
+        height: 40%;
+        border-style: dotted;
+        border-width: 5px;
+    }
+    .buttonContainer {
+        width: 100%;
+    }
+    .answer {
+        margin: auto;
+        font-size: 10vw;
+        user-select: none;
+    }
+    .city {
+        margin: 0;
+        font-size: 12vw;
+        margin-right: 30px;
+        user-select: none;
+    }
+    .country {
+        margin: 0;
+        margin-left: 10px;
+        font-size: 6vw;
+        user-select: none;
+    }
+    .score {
+        margin-bottom: 5%;
+        font-size: 6vw;
+        margin-top: auto;
+    }
+    .gameContainer .right .gameButton:hover {
+        background-color: #ffcd69;
+    }
+    .gameContainer .right .gameButton-wrong {
+        background-color: tomato;
+    }
+    .gameContainer .right .gameButton-right {
+        background-color: teal;
+    }
+    .ubi {
+        width: 100px;
+        height: 100px;
+        /* background-image: url('../images/029-compass.svg'); */
+        background-image: url('../images/029-compass.svg');
+        background-size: contain;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 5%;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .gameContainer {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .gameContainer .left {
+        width: 100%;
+        /* background-color: tomato; */
+        border-bottom-style: dotted;
+        border-bottom-width: 5px;
+    }
+    .gameContainer .leftContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        margin-top: 10%;
+    }
+    .gameContainer .leftContainer .internalLeft {
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+    .gameContainer .left .cityContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gameContainer .right {
+        width: 100%;
+        height: 100%;
+        /* background-color: greenyellow; */
+        margin-top: 10%;
+    }
+    .gameContainer .rightContainer {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        /* margin-top: 10%; */
+    }
+}
+
+
+/* Loew view */

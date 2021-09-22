@@ -17,12 +17,12 @@ export class CapitalService {
 
   public async randomCapital(): Promise<any> {
     const ranNumber = this.randomNumber();
-    await fetch('https://restcountries.eu/rest/v2/all')
+    await fetch('https://restcountries.com/v3/all')
     .then(response => response.json())
     .then(data => {
-      // console.log(data[ranNumber]);
-        this.country = data[ranNumber].name;
-        this.capital = data[ranNumber].capital;
+        console.log(data[ranNumber]);
+        this.country = data[ranNumber].name.common;
+        this.capital = data[ranNumber].capital[0];
         this.capitalID = this.capital.replace(' ', '+');
     });
     return {
